@@ -7,6 +7,7 @@
 var ССЫЛКИ = {
   telegram:   "https://t.me/navrodi",
   youtube:    "https://www.youtube.com/@Navrodi",   // основной канал
+  bot:        "https://t.me/navrodi_podcast_bot",
   tiktok:     ""     // появится — вписать ссылку, кнопка добавится сама
 };
 
@@ -93,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (кнопки) кнопки.innerHTML =
     ссылка(ССЫЛКИ.telegram, "<b>Телеграм</b><span>полные выпуски</span>", "plate t1") +
     ссылка(ССЫЛКИ.youtube, "<b>YouTube</b><span>коротко, шортсы</span>", "plate t2") +
+    ссылка(ССЫЛКИ.bot, "<b>Спросить Навроди</b><span>что это, кто это, написать</span>", "plate t4") +
     (ССЫЛКИ.tiktok ? ссылка(ССЫЛКИ.tiktok, "<b>TikTok</b><span>коротко</span>", "plate t3") : "");
 
   var spisok = document.getElementById("vypuski");
@@ -109,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var podval = document.getElementById("podval");
   if (podval) podval.innerHTML = '<div class="wrap">' + стикмен("никак", 40) +
-    '<span>' + ссылка(ССЫЛКИ.telegram, "Телеграм") + ' ' + ссылка(ССЫЛКИ.youtube, "YouTube") + (ССЫЛКИ.tiktok ? ' ' + ссылка(ССЫЛКИ.tiktok, "TikTok") : '') + '</span></div>';
+    '<span>' + ссылка(ССЫЛКИ.telegram, "Телеграм") + ' ' + ссылка(ССЫЛКИ.youtube, "YouTube") + ' ' + ссылка(ССЫЛКИ.bot, "Написать") + (ССЫЛКИ.tiktok ? ' ' + ссылка(ССЫЛКИ.tiktok, "TikTok") : '') + '</span></div>';
 
   [].forEach.call(document.querySelectorAll("a.soon"), function (a) {
     a.addEventListener("click", function (e) { e.preventDefault(); });
