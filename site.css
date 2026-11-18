@@ -1,0 +1,64 @@
+/* Навроди: чёрный, оранжевый, приглушённый зелёный, кирпичный, кремовый */
+:root{
+  --bg:#1a1612; --bg2:#241f1a; --orange:#e8892f; --green:#5a9e7f; --brick:#c4573a;
+  --cream:#eadfc8; --ink:#1a1612; --muted:#a2957f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--cream);font:17px/1.55 "Rubik",system-ui,sans-serif}
+a{color:var(--orange)}
+a:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-weight:700;line-height:1.15;margin:0}
+h1{font-size:2rem;margin:28px 0 .4em}
+h2{font-size:1.5rem;margin:40px 0 14px}
+
+/* шапка */
+#shapka{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;max-width:640px;margin:0 auto;padding:16px 20px 0}
+#shapka nav{display:flex;flex-wrap:wrap;gap:4px 14px}
+#shapka nav a{color:var(--cream);text-decoration:none;font-weight:500;font-size:1rem;padding:4px 0;border-bottom:3px solid transparent}
+#shapka nav a[aria-current="page"]{border-bottom-color:var(--orange)}
+#shapka nav a:hover{color:var(--orange)}
+.glavnaya #shapka .home{visibility:hidden;width:0}
+
+/* главный экран */
+#hero{text-align:center;padding:30px 0 8px}
+.hero-pic{position:relative;display:inline-block}
+.hero-pic .mic{position:absolute;right:-46px;bottom:-6px}
+.hero-mark{display:block;margin:26px auto 0;max-width:62%}
+
+/* кнопки-плашки */
+#knopki{display:grid;gap:18px;margin:36px 0 10px}
+.plate{display:block;padding:14px 18px;border:4px solid var(--ink);outline:3px solid var(--cream);outline-offset:2px;border-radius:14px;
+  box-shadow:7px 7px 0 #000;color:var(--ink);text-decoration:none}
+.plate b{display:block;font-size:1.6rem;line-height:1.1}
+.plate span{font-size:.95rem}
+.plate.t1{background:var(--orange);transform:rotate(-1.2deg)}
+.plate.t2{background:var(--green);transform:rotate(.8deg)}
+.plate:hover{transform:rotate(0) translate(2px,2px);box-shadow:5px 5px 0 #000}
+.soon{cursor:default}
+
+/* карточки выпусков и песен */
+.ep{display:flex;gap:14px;align-items:flex-start;background:var(--cream);color:var(--ink);padding:14px 16px;border-radius:4px;margin:0 0 16px;
+  box-shadow:0 8px 14px -10px #000}
+.ep:nth-child(odd){transform:rotate(-.5deg)} .ep:nth-child(even){transform:rotate(.6deg)}
+.ep .stick{flex:none}
+.ep h3{font-size:1.2rem}
+.ep-meta{margin:0 0 2px;color:#6b604f;font-size:.9rem}
+.ep-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.mini{font-size:.9rem;font-weight:500;text-decoration:none;color:var(--ink);padding:5px 12px;border:2px solid var(--ink);border-radius:20px}
+.mini.tg{background:var(--orange)} .mini.yt{background:var(--green)}
+.empty{color:var(--muted)}
+
+/* текстовые страницы */
+.text{background:var(--bg2);padding:20px 22px;border-radius:6px;transform:rotate(-.4deg)}
+.text p{margin:0 0 .8em}
+.legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:.95rem;margin:6px 0 20px}
+.legend span{display:flex;align-items:center;gap:8px}
+
+/* подвал */
+#podval{margin-top:60px;border-top:3px dashed #3a332d;padding:22px 0 36px;color:var(--muted);font-size:.95rem}
+#podval .wrap{display:flex;align-items:center;gap:14px}
+#podval a{margin-right:12px}
+
+@media (prefers-reduced-motion:reduce){.plate{transition:none}}
+.plate.t3{background:#c4573a;transform:rotate(-.6deg)}
