@@ -8,7 +8,7 @@
 
 var ССЫЛКИ = {
   telegram:   "https://t.me/navrodi",
-  youtube:    "",   // пусто = кнопки YouTube нет. Было: https://www.youtube.com/@Navrodi
+  youtube:    "https://www.youtube.com/@pAIpecPodcast",   // пусто = кнопки YouTube нет. Канал «пИИп-ец Подкаст»
   bot:        "https://t.me/navrodi_podcast_bot",
   tiktok:     "",   // появится — вписать ссылку, кнопка добавится сама
   kopilka:    ""    // ссылка на донаты (появится — кнопка оживёт)
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (кнопки) кнопки.innerHTML =
     ссылка(ССЫЛКИ.telegram, "<b>" + самолётик(34) + "Телеграм</b><span>полные выпуски</span><i class=\"tyk\">тык!</i>", "plate t1") +
     ссылка(ССЫЛКИ.bot, "<b>Чё за Навроди? " + робот("#eadfc8", 34, "думает") + "</b><span>что это? кто это? написать ✍️</span><i class=\"tyk\">клац!</i>", "plate t4") +
-    (ССЫЛКИ.youtube ? ссылка(ССЫЛКИ.youtube, "<b>YouTube</b><span>коротко, шортсы</span><i class=\"tyk\">жми!</i>", "plate t2") : "") +
+    (ССЫЛКИ.youtube ? ссылка(ССЫЛКИ.youtube, "<b>YouTube</b><span>пИИп-ец Подкаст, эфИИры</span><i class=\"tyk\">жми!</i>", "plate t2") : "") +
     (ССЫЛКИ.tiktok ? ссылка(ССЫЛКИ.tiktok, "<b>TikTok</b><span>коротко</span><i class=\"tyk\">дави!</i>", "plate t3") : "");
 
   var gosti = document.getElementById("gosti");
